@@ -19,10 +19,19 @@ game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(func
                 writefile("autorj-lastimsg.rj", game.CoreGui.RobloxPromptGui.promptOverlay.ErrorPrompt.MessageArea.ErrorFrame.ErrorMessage.Text)
                 queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/baechooYT/Just_Stop/main/autorj.lua", true))()]])
             end
+            game.StarterGui:SetCore("SendNotification",{
+                Title = "Auto Rejoining...",
+                Text = "Rejoining...",
+                Icon = "",
+                Duration = math.huge
+	        })
             while wait() do
-                pcall(function()
-                    game:GetService("TeleportService"):Teleport(game.PlaceId)
-                end)
+              if #game.Players:GetPlayers() <= 1 then
+		           wait()
+		           game:GetService('TeleportService'):Teleport(game.PlaceId, game.Players.LocalPlayer)
+	           else
+	               game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+	           end
             end
         end)
     end
