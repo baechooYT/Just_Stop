@@ -13,7 +13,7 @@ end
 game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(prompt)
     if prompt.Name == "ErrorPrompt" and prompt:FindFirstChild('MessageArea') and prompt.MessageArea:FindFirstChild("ErrorFrame") then
         spawn(function()
-            if writefile and queue_on_teleport and readfile and isfile and delfile then
+            if writefile and readfile and isfile and delfile then
                 writefile("autorj-lastimsg.rj", game.CoreGui.RobloxPromptGui.promptOverlay.ErrorPrompt.MessageArea.ErrorFrame.ErrorMessage.Text)
             end
             game.StarterGui:SetCore("SendNotification",{
