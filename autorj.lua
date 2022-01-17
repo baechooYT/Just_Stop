@@ -1,6 +1,6 @@
 wait(game.Loaded)
 
-local queue_on_teleport = syn.queue_on_teleport or queue_on_teleport or nil
+local queue = syn.queue_on_teleport or queue_on_teleport or nil
 
 if isfile and readfile and writefile and queue_on_teleport and delfile and isfile("autorj-lastimsg.rj") then
     game.StarterGui:SetCore("SendNotification",{
@@ -17,7 +17,7 @@ game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(func
         spawn(function()
             if writefile and queue_on_teleport and readfile and isfile and delfile then
                 writefile("autorj-lastimsg.rj", game.CoreGui.RobloxPromptGui.promptOverlay.ErrorPrompt.MessageArea.ErrorFrame.ErrorMessage.Text)
-                queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/baechooYT/Just_Stop/main/autorj.lua", true))()]])
+                queue([[loadstring(game:HttpGet("https://raw.githubusercontent.com/baechooYT/Just_Stop/main/autorj.lua", true))()]])
             end
             game.StarterGui:SetCore("SendNotification",{
                 Title = "Auto Rejoining...",
