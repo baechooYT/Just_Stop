@@ -1,6 +1,6 @@
 wait(game.Loaded)
 
-local queue_on_teleport = syn.queue_on_teleport or queue_on_teleport
+local queue_on_teleport = syn.queue_on_teleport or queue_on_teleport or nil
 
 if isfile and readfile and writefile and queue_on_teleport and delfile and isfile("autorj-lastimsg.rj") then
     game.StarterGui:SetCore("SendNotification",{
