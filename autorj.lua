@@ -15,7 +15,7 @@ game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(func
         spawn(function()
             if writefile and queue_on_teleport and readfile and isfile and delfile then
                 writefile("autorj-lastimsg.rj", game.CoreGui.RobloxPromptGui.promptOverlay.ErrorPrompt.MessageArea.ErrorFrame.ErrorMessage.Text)
-                queue_on_teleport([[loadstring(game:HttpGet("", true))()]])
+                queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/baechooYT/Just_Stop/main/autorj.lua", true))()]])
             end
             while wait() do
                 game:GetService("TeleportService"):Teleport(game.PlaceId)
