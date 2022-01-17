@@ -1,3 +1,5 @@
+wait(game.Loaded)
+
 local queue_on_teleport = syn.queue_on_teleport or queue_on_teleport
 
 if isfile and readfile and writefile and queue_on_teleport and delfile and isfile("autorj-lastimsg.rj") then
@@ -18,7 +20,9 @@ game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(func
                 queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/baechooYT/Just_Stop/main/autorj.lua", true))()]])
             end
             while wait() do
-                game:GetService("TeleportService"):Teleport(game.PlaceId)
+                pcall(function()
+                    game:GetService("TeleportService"):Teleport(game.PlaceId)
+                end)
             end
         end)
     end
