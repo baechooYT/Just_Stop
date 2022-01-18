@@ -22,7 +22,7 @@ game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(func
                 Icon = "",
                 Duration = math.huge
 	        })
-            while wait() do
+            while wait() do 
               if #game.Players:GetPlayers() <= 1 then
 		           wait()
 		           game:GetService('TeleportService'):Teleport(game.PlaceId, game.Players.LocalPlayer)
