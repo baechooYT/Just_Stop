@@ -1,4 +1,4 @@
-wait(game.Loaded)
+game.Loaded:Wait()
 
 if isfile and readfile and writefile and delfile and isfile("autorj-lastimsg.rj") then
     game.StarterGui:SetCore("SendNotification",{
