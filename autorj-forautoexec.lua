@@ -1,4 +1,4 @@
-game.Loaded:Wait()
+--game.Loaded:Wait() idk this works and its waiting forever
 
 if isfile and readfile and writefile and delfile and isfile("autorj-lastimsg.rj") then
     game.StarterGui:SetCore("SendNotification",{
