@@ -18,7 +18,7 @@ end
 game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(prompt)
     if prompt.Name == "ErrorPrompt" and prompt:FindFirstChild('MessageArea') and prompt.MessageArea:FindFirstChild("ErrorFrame") then
         spawn(function()
-            if writefile and queue_on_teleport and readfile and isfile and delfile then
+            if writefile and queue and readfile and isfile and delfile then
                 writefile("autorj-lastimsg.rj", game.CoreGui.RobloxPromptGui.promptOverlay.ErrorPrompt.MessageArea.ErrorFrame.ErrorMessage.Text)
                 queue([[loadstring(game:HttpGet("https://raw.githubusercontent.com/baechooYT/Just_Stop/main/autorj.lua", true))()]])
             end
