@@ -1,5 +1,7 @@
 --update v0.5 update for mobile executors and queue_on_teleport, filesystem unsurpported
---game.Loaded:Wait()
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
 
 if syn ~= nil and syn.queue_on_teleport ~= nil or queue_on_teleport ~= nil then
 	local queue = syn.queue_on_teleport or queue_on_teleport
