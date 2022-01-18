@@ -1,6 +1,6 @@
 wait(game.Loaded)
 
-if syn or syn.queue_on_teleport ~= nil or queue_on_teleport ~= nil then
+if syn ~= nil and syn.queue_on_teleport ~= nil or queue_on_teleport ~= nil then
 	local queue = syn.queue_on_teleport or queue_on_teleport
 end
 
