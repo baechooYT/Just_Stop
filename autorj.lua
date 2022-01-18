@@ -1,3 +1,4 @@
+--update v0.5 update for mobile executors and queue_on_teleport, filesystem unsurpported
 wait(game.Loaded)
 
 if syn ~= nil and syn.queue_on_teleport ~= nil or queue_on_teleport ~= nil then
